@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
+import { Outlet } from 'react-router';
 
 const RootLayout = () => {
     return (
@@ -13,6 +14,7 @@ const RootLayout = () => {
             {/* Content */}
             <div className='relative z-10 h-full'>
                 <Navbar />
+                <Outlet />
             </div>
         </div>
 
