@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router";
 import RootLayout from "../Layouts/RootLayout/RootLayout";
-import News from "../Components/Navbar/News/News";
+import News from "../Components/News/News";
+import Description from "../Components/Description/Description";
+import Blogs from "../Components/Blogs/Blogs";
+import Contact from "../Components/Contact/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -10,7 +13,19 @@ export const router = createBrowserRouter([
             {
                 path: '/news',
                 Component: News
-            }
+            },
+            {
+                path: '/description',
+                Component: Description
+            },
+            {
+                path: '/blogs',
+                Component: Blogs
+            },
+            {
+                path: '/contact',
+                Component: Contact
+            },
         ]
     }
 ])

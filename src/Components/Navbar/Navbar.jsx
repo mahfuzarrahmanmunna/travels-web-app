@@ -10,16 +10,22 @@ const Navbar = () => {
                 className={({ isActive }) => `font-medium text-white ${isActive ? 'text-indigo-600' : ''}`}>
                 News
             </NavLink>
+        </li>
+        <li>
             <NavLink
                 to="/description"
                 className={({ isActive }) => `font-medium text-white ${isActive ? 'text-indigo-600' : ''}`}>
                 Description
             </NavLink>
+        </li>
+        <li>
             <NavLink
                 to="/blogs"
                 className={({ isActive }) => `font-medium text-white ${isActive ? 'text-indigo-600' : ''}`}>
                 Blogs
             </NavLink>
+        </li>
+        <li>
             <NavLink
                 to="/contact"
                 className={({ isActive }) => `font-medium text-white ${isActive ? 'text-indigo-600' : ''}`}>
