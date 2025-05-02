@@ -4,6 +4,7 @@ import News from "../Components/News/News";
 import Description from "../Components/Description/Description";
 import Blogs from "../Components/Blogs/Blogs";
 import Contact from "../Components/Contact/Contact";
+import Login from "../Page/Login/Login";
 
 export const router = createBrowserRouter([
     {
@@ -27,5 +28,9 @@ export const router = createBrowserRouter([
                 Component: Contact
             },
         ]
+    },
+    {
+        path: 'auth/login',
+        Component: Login
     }
 ])

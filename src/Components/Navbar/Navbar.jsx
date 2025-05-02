@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
 
@@ -7,28 +7,28 @@ const Navbar = () => {
         <li>
             <NavLink
                 to="/news"
-                className={({ isActive }) => `font-medium text-white ${isActive ? 'text-indigo-600' : ''}`}>
+                className={({ isActive }) => `font-medium ${isActive ? 'text-primary' : 'text-white'}`}>
                 News
             </NavLink>
         </li>
         <li>
             <NavLink
                 to="/description"
-                className={({ isActive }) => `font-medium text-white ${isActive ? 'text-indigo-600' : ''}`}>
+                className={({ isActive }) => `font-medium ${isActive ? 'text-primary' : 'text-white'}`}>
                 Description
             </NavLink>
         </li>
         <li>
             <NavLink
                 to="/blogs"
-                className={({ isActive }) => `font-medium text-white ${isActive ? 'text-indigo-600' : ''}`}>
+                className={({ isActive }) => `font-medium ${isActive ? 'text-primary' : 'text-white'}`}>
                 Blogs
             </NavLink>
         </li>
         <li>
             <NavLink
                 to="/contact"
-                className={({ isActive }) => `font-medium text-white ${isActive ? 'text-indigo-600' : ''}`}>
+                className={({ isActive }) => `font-medium ${isActive ? 'text-primary' : 'text-white'}`}>
                 Contact
             </NavLink>
         </li>
@@ -44,11 +44,13 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content  rounded-box z-1 mt-3 w-52 p-2 shadow">
-
+                        {
+                            links
+                        }
                     </ul>
                 </div>
                 <figure>
-                    <img src="https://i.ibb.co.com/hFnT4sNT/logo.png" className='invert w-32 h-1/4' alt="" />
+                    <img src="https://i.ibb.co.com/hFnT4sNT/logo.png" className='invert w-32 h-1/4 mr-3' alt="" />
                 </figure>
                 <div>
                     <label className="flex items-center gap-2 border border-gray-300 px-3 py-2 rounded">
@@ -81,7 +83,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-primary">Button</a>
+                <Link to='/auth/login' className='btn btn-primary lg:px-8'>Login</Link>
             </div>
         </div>
     );
