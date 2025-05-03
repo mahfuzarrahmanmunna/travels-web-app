@@ -1,9 +1,17 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 
 const Navbar = () => {
+    const navigate = useNavigate()
 
     const links = <>
+        <li>
+            <NavLink
+                to="/"
+                className={({ isActive }) => `font-medium ${isActive ? 'text-primary' : 'text-white'}`}>
+                Home
+            </NavLink>
+        </li>
         <li>
             <NavLink
                 to="/news"
@@ -35,7 +43,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar lg:px-24">
+        <div className="navbar lg:px-24 font-montserrat">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,8 +57,8 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <figure>
-                    <img src="https://i.ibb.co.com/hFnT4sNT/logo.png" className='invert w-32 h-1/4 mr-3' alt="" />
+                <figure onClick={() => navigate('/')}>
+                    <img src="https://i.ibb.co.com/hFnT4sNT/logo.png" className='invert w-32 h-1/4 mr-3 cursor-pointer' alt="" />
                 </figure>
                 <div>
                     <label className="flex items-center gap-2 border border-gray-300 px-3 py-2 rounded">

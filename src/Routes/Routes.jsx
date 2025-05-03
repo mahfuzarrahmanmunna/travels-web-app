@@ -5,12 +5,19 @@ import Description from "../Components/Description/Description";
 import Blogs from "../Components/Blogs/Blogs";
 import Contact from "../Components/Contact/Contact";
 import Login from "../Page/Login/Login";
+import Home from "../Page/Home/Home";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         Component: RootLayout,
         children: [
+            {
+                index: true,
+                Component: Home,
+                loader: () => fetch('image.json'),
+                hydrateFallbackElement: <p>Loading....</p>
+            },
             {
                 path: '/news',
                 Component: News
